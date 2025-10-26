@@ -1,5 +1,0 @@
-title: "Sindhuja Chaduvula"
-description: "AI/ML Engineer | Responsible AI | Generative AI"
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"  # <- replace this line for other themes
-plugins:
-  - jekyll-remote-theme
