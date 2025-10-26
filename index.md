@@ -9,7 +9,7 @@ I work on large language models, fine-tuning, and responsible AI frameworks.
 ### 🔗 Links
 - [GitHub](https://github.com/sindhujachaduvula)
 - [LinkedIn](https://linkedin.com/in/sindhujachaduvula)
-- [Resume (PDF)](link-to-your-resume.pdf)
+- [Resume (PDF)](resume.pdf)
 - [Email Me](mailto:sindhu.chaduvula.21@gmail.com)
 
 ---
