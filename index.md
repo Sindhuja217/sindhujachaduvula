@@ -1,4 +1,5 @@
 # Sindhuja Chaduvula  
+<img src="Photo.JPG" alt="Sindhuja Chaduvula" width="180" style="border-radius:50%; box-shadow:0 4px 12px rgba(0,0,0,0.1);" />
 **AI/ML Engineer | Responsible AI | Generative AI**
 
 I work on large language models, fine-tuning, and responsible AI frameworks.  
