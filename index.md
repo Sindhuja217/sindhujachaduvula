@@ -73,7 +73,7 @@ As part of my commitment to responsible innovation, I served as a **Reviewer for
 - 🩺 **Clinical Note Generator** – Fine-tuned LLMs for mental-health documentation using structured SOAP/DAP templates.  
 - 📊 **GenAI Billing Assistant** – Multi-agent RAG system integrating SQL data and unstructured regulatory text for claim validation.  
 - ⚙️ **SEC Filing Automation** – Graph-based linking of financial tables and textual disclosures for explainable report generation.  
-- 🤝 **AIXpert OSS Toolkit** – Co-authored the *Explainability and Interpretability in Agentic AI* survey (2025) and contributed to safety-aligned evaluation modules tied to the **EU AI Act** and **NIST RMF**.
+- 🤝 **AIXpert Survey Paper** – Co-authored the *Explainability and Interpretability in Agentic AI* survey (2025).
 
 ---
 
