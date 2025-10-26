@@ -7,48 +7,139 @@
   <meta name="description" content="Sindhuja Chaduvula — Associate Applied ML Specialist at Vector Institute. Research in AI Safety, Explainability, and Governance-aligned LLMs." />
   <meta name="keywords" content="Sindhuja Chaduvula, AI Safety, AI Governance, Explainability, Vector Institute, Responsible AI, Generative AI, AAAI Reviewer" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
   <style>
-    body{font-family:'Roboto',sans-serif;line-height:1.7;color:#333;background:#fff;}
-    h1,h2,h3,h4{font-family:'Playfair Display',serif;color:#0d1b2a;}
-    header{text-align:center;padding:2rem 0;background:linear-gradient(to right,#f8fafc,#e6eef3);border-bottom:1px solid #dee2e6;}
-    header img{border-radius:50%;width:150px;height:150px;object-fit:cover;margin-bottom:1rem;}
-    header p{margin-bottom:.4rem;color:#6c757d;}
-    a{color:#007bff;text-decoration:none;}a:hover{text-decoration:underline;}
-    .section-title{margin-top:2.5rem;font-size:1.75rem;border-bottom:3px solid #dee2e6;padding-bottom:.5rem;}
-    .highlight-box{background:#f1f3f5;border-left:4px solid #007bff;padding:1rem;margin-bottom:2rem;border-radius:6px;}
-    .award-banner{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:1.5rem;margin-top:1.5rem;}
-    .award-banner img{max-height:200px;border-radius:8px;}
-    footer{text-align:center;padding:1.5rem 0;background:#e9ecef;margin-top:3rem;font-size:.9rem;}
-    ul{padding-left:1.3rem;}ul li{margin-bottom:.6rem;}
-    details summary{cursor:pointer;font-weight:600;}
-    details summary::-webkit-details-marker{display:none;}
-    details summary::after{content:" ▶";}details[open] summary::after{content:" ▼";}
+    :root {
+      --accent: #009688;
+      --accent-light: #d0f2ee;
+      --bg: #f8fafc;
+      --text: #0b0b0b;
+      --dark-bg: #121212;
+      --dark-card: #1e1e1e;
+      --dark-text: #e9ecef;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+      transition: background .3s, color .3s;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #0d1b2a;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: #00695c; }
+
+    header {
+      text-align: center;
+      padding: 3rem 0 2rem 0;
+      background: linear-gradient(90deg, #0d1b2a, #1b4d5e, #009688);
+      color: #fff;
+    }
+    header img {
+      border-radius: 50%;
+      width: 150px; height: 150px; object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #fff;
+    }
+    header h1, header p, header a { color: #fff; }
+
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      padding: 2rem;
+      margin-top: 2rem;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .section:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+
+    .section-title {
+      border-left: 6px solid var(--accent);
+      padding-left: .75rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.7rem;
+      color: #0d1b2a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background: #e0f2f1;
+      color: #004d40;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+    }
+
+    /* Dark mode */
+    body.dark { background: var(--dark-bg); color: var(--dark-text); }
+    body.dark header { background: linear-gradient(90deg,#0b0b0b,#004d40,#00695c); }
+    body.dark .section { background: var(--dark-card); box-shadow: 0 4px 16px rgba(0,0,0,0.6); }
+    body.dark footer { background: #1e1e1e; color: #a7ffeb; }
+    body.dark a { color: #4dd0e1; }
+
+    /* Toggle button */
+    #theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 6px 14px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      font-size: 1.1rem;
+      transition: background .3s;
+    }
+    #theme-toggle:hover { background: #00796b; }
+
+    ul { padding-left: 1.3rem; }
+    ul li { margin-bottom: .6rem; }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--accent);
+      transition: color .2s;
+    }
+    details[open] summary { color: #004d40; }
+    details summary::-webkit-details-marker { display: none; }
   </style>
 </head>
 
 <body class="container">
+
+<button id="theme-toggle">🌓</button>
 
 <header>
   <img src="Photo.JPG" alt="Sindhuja Chaduvula" />
   <h1>Sindhuja Chaduvula</h1>
   <p><strong>Associate Applied ML Specialist · AI Safety · Governance · Explainability</strong></p>
   <p>Vector Institute | University of Waterloo</p>
-  <p><a href="mailto:sindhu.chaduvula.21@gmail.com">sindhu.chaduvula.21@gmail.com</a> | <a href="https://linkedin.com/in/sindhujachaduvula">LinkedIn</a> | <a href="https://github.com/sindhujachaduvula">GitHub</a></p>
+  <p><a href="mailto:sindhu.chaduvula.21@gmail.com">sindhu.chaduvula.21@gmail.com</a> | 
+     <a href="https://linkedin.com/in/sindhujachaduvula">LinkedIn</a> | 
+     <a href="https://github.com/sindhujachaduvula">GitHub</a></p>
 </header>
 
-<section>
+<section class="section">
   <h2 class="section-title">About Me</h2>
-  <div class="highlight-box">
-    <p>I’m an <strong>Applied ML Specialist at the Vector Institute</strong>, working on <strong>AI Safety, Explainability, and Governance-aligned Generative AI systems</strong>. My research bridges applied machine learning and responsible deployment to build trustworthy LLMs and multi-agent architectures.</p>
-    <p>I co-authored <em>“Explainability and Interpretability in Agentic AI: A Survey Across the Agentic Loop (2025)”</em>, leading the Explainability section that mapped intrinsic, post-hoc, causal, and prototype-based methods for LLM-driven agents. This work ties interpretability to global frameworks like the EU AI Act, NIST AI RMF, and ISO/IEC 42001.</p>
-    <p>I also served as a <strong>Reviewer for the AAAI 2026 Workshop on AI Governance (AIGOV)</strong>, reviewing papers on LLM Governance and AI Safety focusing on human oversight and policy-aligned accountability.</p>
-  </div>
+  <p>I’m an <strong>Applied ML Specialist at the Vector Institute</strong>, focusing on <strong>AI Safety, Explainability, and Governance-aligned Generative AI systems</strong>. 
+     My research bridges applied machine learning and responsible deployment to build trustworthy LLMs and multi-agent architectures.</p>
+  <p>I co-authored <em>“Explainability and Interpretability in Agentic AI: A Survey Across the Agentic Loop (2025)”</em>, leading the Explainability section that mapped intrinsic, post-hoc, causal, and prototype-based methods for LLM-driven agents. 
+     This work ties interpretability to global frameworks like the <strong>EU AI Act</strong>, <strong>NIST AI RMF</strong>, and <strong>ISO/IEC 42001</strong>.</p>
+  <p>I also served as a <strong>Reviewer for the AAAI 2026 Workshop on AI Governance (AIGOV)</strong>, reviewing papers on LLM Governance and AI Safety focusing on human oversight and policy-aligned accountability.</p>
 </section>
 
-<section>
+<section class="section">
   <h2 class="section-title">Research Focus</h2>
   <ul>
     <li>AI Safety and Governance-aware Explainability Frameworks</li>
@@ -59,26 +150,26 @@
   </ul>
 </section>
 
-<section>
+<section class="section">
   <h2 class="section-title">Experience</h2>
 
   <h4>🧩 Vector Institute — Associate Applied ML Specialist (2025 – Present)</h4>
   <ul>
-    <li>Conducting research on <strong>AI Safety</strong> and <strong>Governance-Aware Explainability</strong> for LLMs.</li>
+    <li>Research on <strong>AI Safety</strong> and <strong>Governance-Aware Explainability</strong> for LLMs.</li>
     <li>Generated 250+ synthetic scenarios using GPT-4o Mini for bias and fairness audits.</li>
     <li>Designed trust-weighted interpretability mechanisms for alignment auditing and safety verification.</li>
   </ul>
 
   <h4>💡 Vector Institute — Machine Learning Associate (2025)</h4>
   <ul>
-    <li>Built a LangChain + Qdrant RAG pipeline for 1,000-page medical billing documents (−80% lookup time).</li>
-    <li>Implemented hybrid retrieval (OpenAI Embeddings + BM25) with safety filters and governance constraints.</li>
+    <li>Built a LangChain + Qdrant RAG pipeline for medical billing data (−80% lookup time).</li>
+    <li>Implemented hybrid retrieval (OpenAI Embeddings + BM25) with governance constraints.</li>
   </ul>
 
   <h4>🧮 Genellipse — Data Scientist (2024)</h4>
   <ul>
     <li>Fine-tuned Gemma 2B, LLaMA 3, and Mistral 7B on SEC 10-Q filings to automate financial narratives.</li>
-    <li>Automated data pipelines via EDGAR API and AWS S3, ensuring transparency and traceability.</li>
+    <li>Automated ETL pipelines with EDGAR API + AWS S3, ensuring transparency and traceability.</li>
   </ul>
 
   <h4>🤖 AIFocal Inc. — AI Engineer Intern (2023)</h4>
@@ -93,17 +184,17 @@
   </ul>
 </section>
 
-<section>
+<section class="section">
   <h2 class="section-title">Projects & Highlights</h2>
   <ul>
     <li>🩺 <strong>Clinical Note Generator</strong> – Fine-tuned LLMs for mental-health documentation (SOAP/DAP formats).</li>
     <li>📊 <strong>GenAI Billing Assistant</strong> – Multi-agent RAG system combining SQL and policy text for claim validation.</li>
     <li>⚙️ <strong>SEC Filing Automation</strong> – Graph-based linking of financial tables and narratives with Gemma 2B.</li>
-    <li>🤝 <strong>AIXpert OSS Toolkit</strong> – Co-authored Explainability Survey (2025); built safety-aligned evaluation modules following EU AI Act & NIST RMF.</li>
+    <li>🤝 <strong>AIXpert OSS Toolkit</strong> – Co-authored Explainability Survey (2025) and developed governance-aligned evaluation modules.</li>
   </ul>
 </section>
 
-<section>
+<section class="section">
   <h2 class="section-title">Academic & Editorial Service</h2>
   <details>
     <summary>Show Details</summary>
@@ -115,7 +206,7 @@
           <ul>
             <li>AAAI 2026 Workshop on AI Governance (AIGOV)</li>
             <li>NeurIPS Workshops — LAW, RegML</li>
-            <li>Vector Institute Responsible AI projects</li>
+            <li>Vector Institute Responsible AI initiatives</li>
           </ul>
         </div>
         <div class="col-md-6">
@@ -133,6 +224,13 @@
 <footer>
   <p>© 2025 Sindhuja Chaduvula. All rights reserved.</p>
 </footer>
+
+<script>
+const btn=document.getElementById('theme-toggle');
+btn.onclick=()=>{document.body.classList.toggle('dark');
+localStorage.setItem('darkmode',document.body.classList.contains('dark'));};
+if(localStorage.getItem('darkmode')==='true')document.body.classList.add('dark');
+</script>
 
 </body>
 </html>
